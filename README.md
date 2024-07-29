@@ -1,1 +1,2 @@
-# animated_menus
+# Various animated menus etc. #
+## using css adn js ##
