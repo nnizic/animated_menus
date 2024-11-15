@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Navbar Menu Hover efferct</title>
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
   </head>
   <body>
     <nav>
@@ -18,7 +18,7 @@
       const links = document.querySelectorAll("nav a");
       const animation = document.querySelector(".animation");
 
-      links.forEach((link, index) => {
+      links.forEach((link) => {
         link.addEventListener("click", (e) => {
           e.preventDefault(); // sprječava defaultno ponašanje - možda treba možda ne
 
@@ -29,10 +29,8 @@
           link.classList.add("active");
 
           // Prilagođavanje animacije veličini i poziciji linka
-          const width = link.offsetWidth;
-          const left = link.offsetLeft;
-          animation.style.width = `${width}px`;
-          animation.style.left = `${left}px`;
+          const animationClass = `start-${link.textContent.toLowerCase()}`;
+          animation.className = ` animation ${animationClass}`;
         });
       });
     </script>
